@@ -1,0 +1,133 @@
+<div class="row-fluid">
+
+    <form class="form-horizontal span12">
+
+        <fieldset>
+
+            <legend>Подробности</legend>
+            <br/>
+
+            <div class="row">
+                <div class="span8">
+
+                    <div class="control-group">
+                        <label for="wineId" class="control-label">Id:</label>
+
+                        <div class="controls">
+                            <input id="wineId" name="id" type="text" value="<%= _id === null ? '' : _id %>"
+                                   disabled/>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="name" class="control-label">Название:</label>
+
+                        <div class="controls">
+                            <input type="text" id="name" name="name" value="<%= name %>"/>
+                            <span class="help-inline"></span>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="grapes" class="control-label">Сорт винограда:</label>
+
+                        <div class="controls">
+                            <input type="text" id="grapes" name="grapes" value="<%= grapes %>"/>
+                            <span class="help-inline"></span>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="country" class="control-label">Страна:</label>
+
+                        <div class="controls">
+                            <input type="text" id="country" name="country" value="<%= country %>"/>
+                            <span class="help-inline"></span>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="region" class="control-label">Регион:</label>
+
+                        <div class="controls">
+                            <input type="text" id="region" name="region" value="<%= region %>"/>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="year" class="control-label">Год:</label>
+
+                        <div class="controls">
+                            <select class="input-small" id="year" name="year" value="<%= year %>">
+                                <option
+                                <%= year == 2012?'selected':'' %>>2012</option>
+                                <option
+                                <%= year == 2011?'selected':'' %>>2011</option>
+                                <option
+                                <%= year == 2010?'selected':'' %>>2010</option>
+                                <option
+                                <%= year == 2009?'selected':'' %>>2009</option>
+                                <option
+                                <%= year == 2008?'selected':'' %>>2008</option>
+                                <option
+                                <%= year == 2007?'selected':'' %>>2007</option>
+                                <option
+                                <%= year == 2006?'selected':'' %>>2006</option>
+                                <option
+                                <%= year == 2005?'selected':'' %>>2005</option>
+                                <option
+                                <%= year == 2004?'selected':'' %>>2004</option>
+                                <option
+                                <%= year == 2003?'selected':'' %>>2003</option>
+                                <option
+                                <%= year == 2002?'selected':'' %>>2002</option>
+                                <option
+                                <%= year == 2001?'selected':'' %>>2001</option>
+                                <option
+                                <%= year == 2000?'selected':'' %>>2000</option>
+                                <option
+                                <%= year == 1999?'selected':'' %>>1999</option>
+                                <option
+                                <%= year == 1998?'selected':'' %>>1998</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="description" class="control-label">Описание:</label>
+
+                        <div class="controls">
+                            <textarea id="description" name="description" style="width: 90%;" rows="6"><%= description
+                                %></textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="span4">
+                    <div class="well" style="width: 180px;text-align: center;width:50%;margin: 0px auto;">
+                        <p><img id="picture" width="180" src="<%= picture === null ? 'pics/generic.jpg' : 'pics/' + picture %>"/></p>
+                        <p style="color:#999;">Чтобы изменить изображение, перетащите новое изображение из файловой системы в поле выше.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </fieldset>
+
+        <div class="form-actions">
+            <a href="#" class="btn btn-primary save">Внести в каталог</a>
+            <a href="#" class="btn delete">Удалить из каталога</a>
+        </div>
+
+    </form>
+
+</div>
+
+<div class="row-fluid status-bar">
+    <div class="span12">
+        <div class="alert alert-success" style="display: none">
+            <b>Восхитительно!</b> Вино помещено в погреб
+        </div>
+    </div>
+</div>
